@@ -1,0 +1,35 @@
+.language-selector {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.language-selector:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.language-selector:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .language-selector {
+    top: 0.75rem;
+    right: 0.75rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+

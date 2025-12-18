@@ -1,0 +1,59 @@
+.datetime-picker {
+  margin-bottom: 1.5rem;
+}
+
+.datetime-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.datetime-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.required {
+  color: #e74c3c;
+  margin-left: 0.25rem;
+}
+
+.date-input,
+.time-input {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.date-input:focus,
+.time-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.date-input.error,
+.time-input.error {
+  border-color: #e74c3c;
+}
+
+.error-message {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .datetime-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+

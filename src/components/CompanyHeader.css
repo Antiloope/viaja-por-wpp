@@ -1,0 +1,67 @@
+.company-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-header-content {
+  max-width: 600px;
+  width: 100%;
+}
+
+.company-logo {
+  margin-bottom: 1rem;
+}
+
+.company-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.company-name {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.company-description {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 0.5rem;
+}
+
+.company-area {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .company-header {
+    padding: 1.5rem 1rem;
+    min-height: 180px;
+  }
+
+  .company-name {
+    font-size: 1.75rem;
+  }
+
+  .company-description {
+    font-size: 1rem;
+  }
+
+  .company-area {
+    font-size: 0.85rem;
+  }
+}
+
