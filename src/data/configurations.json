@@ -1,0 +1,59 @@
+{
+  "companies": [
+    {
+      "slug": "xuma-travel",
+      "name": "Xuma Travel",
+      "whatsappNumber": "+5493512046485",
+      "description": "Servicio de transporte privado en Mendoza, Argentina",
+      "operatingArea": "Mendoza y alrededores",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMXKbihUu4Vbyg_dKxClw0rvCYAigq0sTm4g&s",
+      "mapCenter": {
+        "lat": -32.8895,
+        "lng": -68.8458
+      },
+      "mapZoom": 12,
+      "theme": {
+        "primaryColor": "#2563eb",
+        "secondaryColor": "#64748b"
+      },
+      "contact": {
+        "email": null,
+        "phone": "+5493512046485",
+        "website": null
+      },
+      "features": {
+        "showOperatingArea": true,
+        "allowPassengerInput": true,
+        "allowNotes": true
+      }
+    },
+    {
+      "slug": "rodri-viajes",
+      "name": "Rodri Viajes",
+      "whatsappNumber": "+5493512046485",
+      "description": "Servicio de transporte privado en Córdoba, Argentina",
+      "operatingArea": "Córdoba y alrededores",
+      "logo": "https://i.pinimg.com/236x/37/83/3c/37833c24ac336d9e72aa435e046c478e.jpg",
+      "mapCenter": {
+        "lat": -31.4201,
+        "lng": -64.1888
+      },
+      "mapZoom": 12,
+      "theme": {
+        "primaryColor": "#2563eb",
+        "secondaryColor": "#64748b"
+      },
+      "contact": {
+        "email": null,
+        "phone": "+5493512046485",
+        "website": null
+      },
+      "features": {
+        "showOperatingArea": true,
+        "allowPassengerInput": true,
+        "allowNotes": true
+      }
+    }
+  ]
+}
+

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import { useTranslation } from '../utils/useTranslation'
-import { companyConfig } from '../data/companyConfig'
+import { useCompany } from '../context/CompanyContext'
 import 'leaflet/dist/leaflet.css'
 import './LocationPicker.css'
 
@@ -89,6 +89,7 @@ const searchAddresses = async (query) => {
 
 const LocationPicker = ({ label, value, onChange, error, required = true }) => {
   const { t } = useTranslation()
+  const { config } = useCompany()
   const [position, setPosition] = useState(null)
   const [address, setAddress] = useState(value || '')
   const [isGeocoding, setIsGeocoding] = useState(false)
@@ -104,8 +105,8 @@ const LocationPicker = ({ label, value, onChange, error, required = true }) => {
   const suggestionsRef = useRef(null)
 
   // Coordenadas iniciales del mapa
-  const mapCenter = companyConfig.mapCenter || { lat: -32.8895, lng: -68.8458 }
-  const mapZoom = companyConfig.mapZoom || 13
+  const mapCenter = config?.mapCenter || { lat: -32.8895, lng: -68.8458 }
+  const mapZoom = config?.mapZoom || 13
 
   // Sincronizar address con value cuando cambia externamente
   useEffect(() => {
@@ -323,7 +324,7 @@ const LocationPicker = ({ label, value, onChange, error, required = true }) => {
                 <span>{t('geocoding')}</span>
               </div>
             )}
-            {companyConfig.operatingArea && (
+            {config?.operatingArea && (
               <div className="operating-area-indicator">
                 <span className="area-badge">{t('operatingArea')}</span>
               </div>

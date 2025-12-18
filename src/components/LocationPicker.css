@@ -6,12 +6,13 @@
   display: block;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #1f2937;
   font-size: 1rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .required {
-  color: #e74c3c;
+  color: #ef4444;
   margin-left: 0.25rem;
 }
 
@@ -27,7 +28,7 @@
   height: 350px;
   border-radius: 8px;
   overflow: hidden;
-  border: 2px solid #ddd;
+  border: 2px solid #e5e7eb;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,8 +47,9 @@
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  color: #667eea;
+  color: #8b5cf6;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   pointer-events: none;
@@ -60,7 +62,7 @@
   content: '';
   width: 16px;
   height: 16px;
-  border: 2px solid #667eea;
+  border: 2px solid #8b5cf6;
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
@@ -81,12 +83,13 @@
 }
 
 .area-badge {
-  background: rgba(102, 126, 234, 0.9);
+  background: rgba(16, 185, 129, 0.9);
   color: white;
   padding: 0.4rem 0.8rem;
   border-radius: 15px;
   font-size: 0.75rem;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
@@ -99,15 +102,19 @@
 .location-input {
   width: 100%;
   padding: 0.875rem;
-  border: 2px solid #ddd;
+  border: 2px solid #e5e7eb;
   border-radius: 8px;
   font-size: 1rem;
+  font-family: 'Inter', sans-serif;
   transition: border-color 0.3s ease;
+  background: white;
+  color: #1f2937;
 }
 
 .location-input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
 }
 
 .searching-indicator {
@@ -116,7 +123,8 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.85rem;
-  color: #666;
+  color: #6b7280;
+  font-family: 'Inter', sans-serif;
   pointer-events: none;
 }
 
@@ -126,7 +134,7 @@
   left: 0;
   right: 0;
   background: white;
-  border: 2px solid #ddd;
+  border: 2px solid #e5e7eb;
   border-top: none;
   border-radius: 0 0 8px 8px;
   max-height: 200px;
@@ -143,7 +151,8 @@
   padding: 0.875rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f3f4f6;
+  font-family: 'Inter', sans-serif;
 }
 
 .suggestion-item:last-child {
@@ -152,7 +161,7 @@
 
 .suggestion-item:hover,
 .suggestion-item.selected {
-  background-color: #f5f5f5;
+  background-color: #f0fdf4;
 }
 
 .suggestion-icon {
@@ -162,17 +171,18 @@
 
 .suggestion-text {
   flex: 1;
-  color: #333;
+  color: #1f2937;
   font-size: 0.95rem;
   word-break: break-word;
 }
 
 .map-instructions {
   font-size: 0.85rem;
-  color: #666;
+  color: #6b7280;
   margin: 0;
   font-style: italic;
   text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .location-actions {
@@ -189,19 +199,20 @@
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .confirm-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #10b981 100%);
   color: white;
-  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
 }
 
 .confirm-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
 }
 
 .confirm-btn:active:not(:disabled) {
@@ -214,14 +225,14 @@
 }
 
 .cancel-btn {
-  background: #f5f5f5;
-  color: #666;
-  border: 2px solid #ddd;
+  background: #f3f4f6;
+  color: #4b5563;
+  border: 2px solid #e5e7eb;
 }
 
 .cancel-btn:hover {
-  background: #e8e8e8;
-  border-color: #bbb;
+  background: #e5e7eb;
+  border-color: #d1d5db;
 }
 
 .cancel-btn:active {
@@ -233,8 +244,8 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  background: #f5f5f5;
-  border: 2px solid #4caf50;
+  background: #f0fdf4;
+  border: 2px solid #10b981;
   border-radius: 8px;
 }
 
@@ -251,26 +262,28 @@
 
 .location-text {
   flex: 1;
-  color: #333;
+  color: #1f2937;
   font-weight: 500;
+  font-family: 'Inter', sans-serif;
   word-break: break-word;
 }
 
 .edit-location-btn {
   padding: 0.5rem 1rem;
-  background: #667eea;
+  background: #8b5cf6;
   color: white;
   border: none;
   border-radius: 6px;
   font-size: 0.9rem;
   font-weight: 600;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
   transition: background 0.3s ease;
   white-space: nowrap;
 }
 
 .edit-location-btn:hover {
-  background: #5568d3;
+  background: #7c3aed;
 }
 
 .edit-location-btn:active {
@@ -279,14 +292,15 @@
 
 .error-message {
   display: block;
-  color: #e74c3c;
+  color: #ef4444;
   font-size: 0.85rem;
   margin-top: 0.5rem;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Estilos para Leaflet */
 .leaflet-container {
-  font-family: inherit;
+  font-family: 'Inter', sans-serif;
 }
 
 .leaflet-popup-content-wrapper {

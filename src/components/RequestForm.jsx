@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { useTranslation } from '../utils/useTranslation'
-import { companyConfig } from '../data/companyConfig'
+import { useCompany } from '../context/CompanyContext'
 import { generateWhatsAppURL } from '../utils/whatsapp'
-import LocationPicker from './LocationPicker'
+import LocationInput from './LocationInput'
 import DateTimePicker from './DateTimePicker'
 import './RequestForm.css'
 
 const RequestForm = () => {
   const { t, language } = useTranslation()
+  const { config } = useCompany()
   
   const [formData, setFormData] = useState({
     origin: '',
@@ -63,7 +64,7 @@ const RequestForm = () => {
 
     // Generar URL de WhatsApp
     const whatsappURL = generateWhatsAppURL(
-      companyConfig.whatsappNumber,
+      config?.whatsappNumber || '',
       {
         origin: formData.origin,
         destination: formData.destination,
@@ -81,60 +82,62 @@ const RequestForm = () => {
 
   return (
     <form className="request-form" onSubmit={handleSubmit}>
-      <h2 className="form-title">{t('requestForm')}</h2>
-
-      <LocationPicker
-        label={t('origin')}
-        value={formData.origin}
-        onChange={(value) => setFormData({ ...formData, origin: value })}
-        error={errors.origin}
-        required
-      />
-
-      <LocationPicker
-        label={t('destination')}
-        value={formData.destination}
-        onChange={(value) => setFormData({ ...formData, destination: value })}
-        error={errors.destination}
-        required
-      />
-
-      <DateTimePicker
-        date={formData.date}
-        time={formData.time}
-        onDateChange={(value) => setFormData({ ...formData, date: value })}
-        onTimeChange={(value) => setFormData({ ...formData, time: value })}
-        dateError={errors.date}
-        timeError={errors.time}
-      />
-
-      <div className="form-field">
-        <label className="form-label">
-          {t('passengers')}
-          <span className="optional"> ({t('optional')})</span>
-        </label>
-        <input
-          type="number"
-          className="form-input"
-          min="1"
-          placeholder={t('passengersPlaceholder')}
-          value={formData.passengers}
-          onChange={(e) => setFormData({ ...formData, passengers: e.target.value })}
+      <div className="form-fields-grid">
+        <LocationInput
+          label={t('origin')}
+          value={formData.origin}
+          onChange={(value) => setFormData({ ...formData, origin: value })}
+          error={errors.origin}
+          required
         />
-      </div>
 
-      <div className="form-field">
-        <label className="form-label">
-          {t('notes')}
-          <span className="optional"> ({t('optional')})</span>
-        </label>
-        <textarea
-          className="form-textarea"
-          rows="4"
-          placeholder={t('notesPlaceholder')}
-          value={formData.notes}
-          onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+        <LocationInput
+          label={t('destination')}
+          value={formData.destination}
+          onChange={(value) => setFormData({ ...formData, destination: value })}
+          error={errors.destination}
+          required
         />
+
+        <div className="form-row">
+          <div className="form-field compact-field">
+            <label className="form-label">
+              {t('passengers')}
+              <span className="optional"> ({t('optional')})</span>
+            </label>
+            <input
+              type="number"
+              className="form-input"
+              min="1"
+              placeholder={t('passengersPlaceholder')}
+              value={formData.passengers}
+              onChange={(e) => setFormData({ ...formData, passengers: e.target.value })}
+            />
+          </div>
+
+          <DateTimePicker
+            date={formData.date}
+            time={formData.time}
+            onDateChange={(value) => setFormData({ ...formData, date: value })}
+            onTimeChange={(value) => setFormData({ ...formData, time: value })}
+            dateError={errors.date}
+            timeError={errors.time}
+          />
+        </div>
+
+        <div className="form-field compact-field">
+          <label className="form-label">
+            {t('notes')}
+            <span className="optional"> ({t('optional')})</span>
+          </label>
+          <textarea
+            className="form-textarea"
+            rows="2"
+            placeholder={t('notesPlaceholder')}
+            value={formData.notes}
+            onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+          />
+        </div>
       </div>
 
       <button
@@ -149,4 +152,3 @@ const RequestForm = () => {
 }
 
 export default RequestForm
-

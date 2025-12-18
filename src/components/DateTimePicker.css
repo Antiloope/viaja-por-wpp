@@ -1,59 +1,81 @@
 .datetime-picker {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
 .datetime-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .datetime-label {
   display: block;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #333;
-  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #1f2937;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
 }
 
 .required {
-  color: #e74c3c;
+  color: #ef4444;
   margin-left: 0.25rem;
 }
 
 .date-input,
 .time-input {
   width: 100%;
-  padding: 0.875rem;
-  border: 2px solid #ddd;
+  padding: 0.625rem 0.75rem;
+  border: 2px solid #e5e7eb;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
   transition: border-color 0.3s ease;
-  font-family: inherit;
+  background: white;
+  color: #1f2937;
 }
 
 .date-input:focus,
 .time-input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
 }
 
 .date-input.error,
 .time-input.error {
-  border-color: #e74c3c;
+  border-color: #ef4444;
 }
 
 .error-message {
   display: block;
-  color: #e74c3c;
-  font-size: 0.85rem;
-  margin-top: 0.5rem;
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-family: 'Inter', sans-serif;
 }
 
 @media (max-width: 768px) {
   .datetime-row {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 0.625rem;
+  }
+
+  .datetime-label {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .date-input,
+  .time-input {
+    padding: 0.5rem 0.625rem;
+    font-size: 0.875rem;
   }
 }
 
+/* Cuando la pantalla es muy pequeña, apilar fecha y hora verticalmente */
+@media (max-width: 480px) {
+  .datetime-row {
+    grid-template-columns: 1fr;
+    gap: 0.625rem;
+  }
+}

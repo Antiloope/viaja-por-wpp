@@ -47,6 +47,10 @@ export const translations = {
     mapInstructions: "Haz clic en el mapa, arrastra el pin o busca una dirección",
     confirm: "Confirmar",
     cancel: "Cancelar",
+    selectLocation: "Seleccionar ubicación",
+    selectOnMap: "Seleccionar en mapa",
+    selectedAddress: "Dirección seleccionada",
+    close: "Cerrar",
     
     // Configuración empresa
     operatingAreaLabel: "Operamos en"
@@ -99,6 +103,10 @@ export const translations = {
     mapInstructions: "Click on the map, drag the pin or search for an address",
     confirm: "Confirm",
     cancel: "Cancel",
+    selectLocation: "Select location",
+    selectOnMap: "Select on map",
+    selectedAddress: "Selected address",
+    close: "Close",
     
     // Configuración empresa
     operatingAreaLabel: "We operate in"
