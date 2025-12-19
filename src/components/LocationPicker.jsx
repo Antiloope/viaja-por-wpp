@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import { useTranslation } from '../utils/useTranslation'
 import { useCompany } from '../context/CompanyContext'
+import PinIcon from './PinIcon'
 import 'leaflet/dist/leaflet.css'
 import './LocationPicker.css'
 
@@ -356,7 +357,9 @@ const LocationPicker = ({ label, value, onChange, error, required = true }) => {
                     onClick={() => handleSelectSuggestion(suggestion)}
                     onMouseEnter={() => setSelectedSuggestionIndex(index)}
                   >
-                    <span className="suggestion-icon">📍</span>
+                    <span className="suggestion-icon">
+                      <PinIcon size={16} color="#76748C" />
+                    </span>
                     <span className="suggestion-text">{suggestion.display_name}</span>
                   </div>
                 ))}
@@ -389,7 +392,9 @@ const LocationPicker = ({ label, value, onChange, error, required = true }) => {
       ) : (
         <div className="location-selected">
           <div className="selected-location-display">
-            <span className="location-icon">📍</span>
+            <span className="location-icon">
+              <PinIcon size={20} color="#1153ED" />
+            </span>
             <span className="location-text">{value}</span>
           </div>
           <button 

@@ -16,7 +16,7 @@ export const translations = {
     passengersPlaceholder: "Ej: 2",
     notes: "Notas adicionales",
     notesPlaceholder: "Información adicional (opcional)",
-    sendRequest: "Enviar solicitud por WhatsApp",
+    sendRequest: "Enviar consulta por WhatsApp",
     required: "Requerido",
     optional: "Opcional",
     

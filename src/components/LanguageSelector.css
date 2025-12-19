@@ -2,14 +2,14 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #10b981;
+  background: var(--color-blue);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  color: var(--color-white);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
@@ -17,7 +17,7 @@
 }
 
 .language-selector:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-blue-dark);
   transform: scale(1.05);
 }
 

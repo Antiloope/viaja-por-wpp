@@ -5,6 +5,7 @@ import CompanyHeader from './components/CompanyHeader'
 import RequestForm from './components/RequestForm'
 import LandingPage from './components/LandingPage'
 import NotFound from './components/NotFound'
+import Footer from './components/Footer'
 import './App.css'
 
 function MainContent() {
@@ -30,6 +31,7 @@ function MainContent() {
         <main className="App-main">
           <RequestForm />
         </main>
+        <Footer />
       </div>
     )
   }

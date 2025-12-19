@@ -28,7 +28,9 @@ const CompanyHeader = () => {
           </div>
         )}
         <h1 className="company-name">{config.name}</h1>
-        <p className="company-description">{t('companyDescription')}</p>
+        {config.description && (
+          <p className="company-description">{config.description}</p>
+        )}
         {config.operatingArea && (
           <p className="company-area">
             {t('operatingAreaLabel')}: {config.operatingArea}

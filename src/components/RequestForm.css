@@ -3,9 +3,9 @@
   width: 100%;
   margin: 0 auto;
   padding: 1rem;
-  background: white;
+  background: var(--color-white);
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(19, 20, 21, 0.08);
 }
 
 .form-fields-grid {
@@ -34,13 +34,13 @@
   display: block;
   font-weight: 600;
   margin-bottom: 0.25rem;
-  color: #1f2937;
+  color: var(--color-dark);
   font-size: 0.875rem;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
 }
 
 .optional {
-  color: #6b7280;
+  color: var(--color-gray);
   font-weight: 400;
   font-size: 0.75rem;
 }
@@ -49,20 +49,20 @@
 .form-textarea {
   width: 100%;
   padding: 0.625rem 0.75rem;
-  border: 2px solid #e5e7eb;
+  border: 2px solid var(--color-gray-light);
   border-radius: 8px;
   font-size: 0.9rem;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
   transition: border-color 0.3s ease;
-  background: white;
-  color: #1f2937;
+  background: var(--color-white);
+  color: var(--color-dark);
 }
 
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #8b5cf6;
-  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(17, 83, 237, 0.1);
 }
 
 .form-textarea {
@@ -74,22 +74,23 @@
 .submit-button {
   width: 100%;
   padding: 0.875rem 1.5rem;
-  background: linear-gradient(135deg, #8b5cf6 0%, #10b981 100%);
-  color: white;
+  background: var(--color-blue);
+  color: var(--color-white);
   border: none;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family);
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 0.75rem;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 4px 12px rgba(17, 83, 237, 0.3);
 }
 
 .submit-button:hover:not(:disabled) {
+  background: var(--color-blue-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+  box-shadow: 0 6px 16px rgba(17, 83, 237, 0.4);
 }
 
 .submit-button:active:not(:disabled) {
@@ -97,6 +98,8 @@
 }
 
 .submit-button:disabled {
+  background: var(--color-gray-light);
+  color: var(--color-gray);
   opacity: 0.6;
   cursor: not-allowed;
 }

@@ -2,14 +2,14 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #f9fafb;
+  background: var(--color-light);
 }
 
 .App-main {
   flex: 1;
   width: 100%;
   padding: 0.75rem 0.5rem;
-  background: #f9fafb;
+  background: var(--color-light);
 }
 
 @media (max-width: 768px) {

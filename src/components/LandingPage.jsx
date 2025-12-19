@@ -1,4 +1,5 @@
 import { landingConfig } from '../data/landingConfig'
+import Footer from './Footer'
 import './LandingPage.css'
 
 const LandingPage = () => {
@@ -57,6 +58,7 @@ const LandingPage = () => {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

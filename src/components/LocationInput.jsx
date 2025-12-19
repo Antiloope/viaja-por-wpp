@@ -1,6 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from 'react'
 import { useTranslation } from '../utils/useTranslation'
 import MapModal from './MapModal'
+import PinIcon from './PinIcon'
 import './LocationInput.css'
 
 // Función de búsqueda de direcciones
@@ -173,7 +174,7 @@ const LocationInput = ({ label, value, onChange, error, required = true }) => {
             onClick={() => setMapModalOpen(true)}
             title={t('selectOnMap')}
           >
-            📍
+            <PinIcon size={20} color="white" />
           </button>
           {showSuggestions && suggestions.length > 0 && (
             <div ref={suggestionsRef} className="suggestions-dropdown">
@@ -184,7 +185,9 @@ const LocationInput = ({ label, value, onChange, error, required = true }) => {
                   onClick={() => handleSelectSuggestion(suggestion)}
                   onMouseEnter={() => setSelectedSuggestionIndex(index)}
                 >
-                  <span className="suggestion-icon">📍</span>
+                  <span className="suggestion-icon">
+                    <PinIcon size={16} color="#76748C" />
+                  </span>
                   <span className="suggestion-text">{suggestion.display_name}</span>
                 </div>
               ))}

@@ -11,21 +11,7 @@
         "lat": -32.8895,
         "lng": -68.8458
       },
-      "mapZoom": 12,
-      "theme": {
-        "primaryColor": "#2563eb",
-        "secondaryColor": "#64748b"
-      },
-      "contact": {
-        "email": null,
-        "phone": "+5493512046485",
-        "website": null
-      },
-      "features": {
-        "showOperatingArea": true,
-        "allowPassengerInput": true,
-        "allowNotes": true
-      }
+      "mapZoom": 12
     },
     {
       "slug": "rodri-viajes",
@@ -38,21 +24,7 @@
         "lat": -31.4201,
         "lng": -64.1888
       },
-      "mapZoom": 12,
-      "theme": {
-        "primaryColor": "#2563eb",
-        "secondaryColor": "#64748b"
-      },
-      "contact": {
-        "email": null,
-        "phone": "+5493512046485",
-        "website": null
-      },
-      "features": {
-        "showOperatingArea": true,
-        "allowPassengerInput": true,
-        "allowNotes": true
-      }
+      "mapZoom": 12
     }
   ]
 }
